@@ -17,6 +17,15 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by
+      <a href="https://www.linkedin.com/in/menard-maranan/" target="_blank"
+        >Menard Maranan</a
+      >.
+    </div>
     <header class="hero-section">
       <picture>
         <img class="header-logo" src="./images/logo.svg" alt="Logo" />
@@ -40,24 +49,27 @@
       </div>
     </header>
     <main>
-      <!-- <section>
-        <h2>Keep track of your snippets</h2>
+      <section class="features-section">
+        <div class="features-section__copy">
+          <h2>Keep track of your snippets</h2>
 
-        <p>
-          Clipboard instantly stores any item you copy in the cloud, meaning you
-          can access your snippets immediately on all your devices. Our Mac and
-          iOS apps will help you organize everything.
-        </p>
+          <p>
+            Clipboard instantly stores any item you copy in the cloud, meaning
+            you can access your snippets immediately on all your devices. Our
+            Mac and iOS apps will help you organize everything.
+          </p>
+        </div>
 
-        <div>
+        <div class="features-section__subsection">
           <picture>
             <img
               src="./images/image-computer.png"
               alt="Computer with the Clipboard App showing on screen"
+              class="features-section__section-img"
             />
           </picture>
 
-          <div>
+          <div class="features-section__features">
             <div>
               <h3>Quick Search</h3>
               <p>
@@ -80,31 +92,34 @@
             </div>
           </div>
         </div>
-      </section> -->
+      </section>
 
-      <!-- <section>
-        <h2>Access Clipboard anywhere</h2>
-
-        <p>
-          Whether you're on the go, or at your computer, you can access all your
-          Clipboard snippets in a few simple clicks.
-        </p>
+      <section class="cross-platform-section">
+        <div class="cross-platform-section__copy">
+          <h2>Access Clipboard anywhere</h2>
+          <p>
+            Whether you're on the go, or at your computer, you can access all
+            your Clipboard snippets in a few simple clicks.
+          </p>
+        </div>
 
         <picture>
           <img
             src="./images/image-devices.png"
             alt="Phone and Tablet showing the Clipboard App on screen"
+            class="cross-platform-section__main-img"
           />
         </picture>
-      </section> -->
+      </section>
 
-      <!-- <section>
-        <h2>Supercharge your workflow</h2>
-
-        <p>We've got the tools to boost your productivity.</p>
-
+      <section class="benefits-section">
         <div>
-          <div>
+          <h2>Supercharge your workflow</h2>
+          <p>We've got the tools to boost your productivity.</p>
+        </div>
+
+        <div class="benefits-section__benefits">
+          <div class="benefits-section__benefits__benefit">
             <img src="./images/icon-blacklist.svg" alt="" />
             <h3>Create blacklists</h3>
             <p>
@@ -113,7 +128,7 @@
             </p>
           </div>
 
-          <div>
+          <div class="benefits-section__benefits__benefit">
             <img src="./images/icon-text.svg" alt="" />
             <h3>Plain text snippets</h3>
             <p>
@@ -121,7 +136,7 @@
             </p>
           </div>
 
-          <div>
+          <div class="benefits-section__benefits__benefit">
             <img src="./images/icon-preview.svg" alt="" />
             <h3>Sneak preview</h3>
             <p>
@@ -129,107 +144,120 @@
             </p>
           </div>
         </div>
-      </section> -->
-      <!-- <section class="company-logos">
-        <img
-          src="./images/logo-google.png"
-          alt="Google Logo"
-          class="company-logos__logo"
-        />
-        <img
-          src="./images/logo-ibm.png"
-          alt="IBM Logo"
-          class="company-logos__logo"
-        />
-        <img
-          src="./images/logo-microsoft.png"
-          alt="Microsoft Logo"
-          class="company-logos__logo"
-        />
-        <img
-          src="./images/logo-hp.png"
-          alt="HP Logo"
-          class="company-logos__logo"
-        />
-        <img
-          src="./images/logo-vector-graphics.png"
-          alt="Vector Graphics Logo"
-          class="company-logos__logo"
-        />
-      </section> -->
+      </section>
+      <section class="company-logos-section">
+        <ul class="company-logos">
+          <li>
+            <img
+              src="./images/logo-google.png"
+              alt="Google Logo"
+              class="company-logos__logo"
+            />
+          </li>
+          <li>
+            <img
+              src="./images/logo-ibm.png"
+              alt="IBM Logo"
+              class="company-logos__logo"
+            />
+          </li>
+          <li>
+            <img
+              src="./images/logo-microsoft.png"
+              alt="Microsoft Logo"
+              class="company-logos__logo"
+            />
+          </li>
+          <li>
+            <img
+              src="./images/logo-hp.png"
+              alt="HP Logo"
+              class="company-logos__logo"
+            />
+          </li>
+          <li>
+            <img
+              src="./images/logo-vector-graphics.png"
+              alt="Vector Graphics Logo"
+              class="company-logos__logo"
+            />
+          </li>
+        </ul>
+      </section>
 
-      <!-- <section>
-        <h2>Clipboard for iOS and Mac OS</h2>
-
-        <p>
-          Available for free on the App Store. Download for Mac or iOS, sync
-          with iCloud and you're ready to start adding to your clipboard.
-        </p>
-
+      <section class="cta-section">
         <div>
-          <a href="#"> Download for iOS </a>
-          <a href="#"> Download for Mac </a>
+          <h2>Clipboard for iOS and Mac OS</h2>
+          <p>
+            Available for free on the App Store. Download for Mac or iOS, sync
+            with iCloud and you're ready to start adding to your clipboard.
+          </p>
         </div>
-      </section> -->
+
+        <div class="download-btns">
+          <a href="#" class="download-btn download-btns__iOS-btn"
+            >Download for iOS</a
+          >
+          <a href="#" class="download-btn download-btns__Mac-btn"
+            >Download for Mac</a
+          >
+        </div>
+      </section>
     </main>
 
-    <!-- <footer>
-      <picture class="footer-logo">
-        <img src="./images/logo.svg" alt="Logo" />
-      </picture>
-      <nav>
-        <ul>
-          <li>
-            <a href="#">FAQs</a>
-          </li>
-          <li>
-            <a href="#">Contact Us</a>
-          </li>
-          <li>
-            <a href="#">Privacy Policy</a>
-          </li>
-          <li>
-            <a href="#">Press Kit</a>
-          </li>
-          <li>
-            <a href="#">Install Guide</a>
-          </li>
-        </ul>
-      </nav>
-      <div class="icons-group">
-        <ul>
-          <li>
-            <a href="#"
-              ><img
-                src="./images/icon-facebook.svg"
-                alt="Facebook Logo"
-                class="icons-group__icon"
-            /></a>
-          </li>
-          <li>
-            <a href="#"
-              ><img
-                src="./images/icon-twitter.svg"
-                alt="Twitter Logo"
-                class="icons-group__icon"
-            /></a>
-          </li>
-          <li>
-            <a href="#"
-              ><img
-                src="./images/icon-instagram.svg"
-                alt="Instagram Logo"
-                class="icons-group__icon"
-            /></a>
-          </li>
-        </ul>
+    <footer>
+      <div class="footer-content">
+        <picture class="footer-logo">
+          <img src="./images/logo.svg" alt="Logo" class="footer-logo" />
+        </picture>
+        <nav>
+          <ul class="nav-links">
+            <li>
+              <a href="#">FAQs</a>
+            </li>
+            <li>
+              <a href="#">Privacy Policy</a>
+            </li>
+            <li>
+              <a href="#">Install Guide</a>
+            </li>
+            <li>
+              <a href="#">Contact Us</a>
+            </li>
+            <li>
+              <a href="#">Press Kit</a>
+            </li>
+          </ul>
+        </nav>
+        <div>
+          <ul class="icons-group">
+            <li>
+              <a href="#"
+                ><img
+                  src="./images/icon-facebook.svg"
+                  alt="Facebook Logo"
+                  class="icons-group__icon"
+              /></a>
+            </li>
+            <li>
+              <a href="#"
+                ><img
+                  src="./images/icon-twitter.svg"
+                  alt="Twitter Logo"
+                  class="icons-group__icon"
+              /></a>
+            </li>
+            <li>
+              <a href="#"
+                ><img
+                  src="./images/icon-instagram.svg"
+                  alt="Instagram Logo"
+                  class="icons-group__icon"
+              /></a>
+            </li>
+          </ul>
+        </div>
       </div>
-      <div class="attribution">
-        Challenge by
-        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
-          >Frontend Mentor</a
-        >. Coded by <a href="#">Your Name Here</a>.
-      </div>
-    </footer> -->
+    </footer>
   </body>
 </html>

@@ -8,9 +8,13 @@
   --clr-primary-blue-400: hsl(233, 100%, 69%);
   --clr-primary-blue-700: hsl(233, 100%, 59%);
   --clr-neutral-dark-grayish-blue: hsl(210, 10%, 33%);
+  --clr-neutral-grayish-blue-100: hsl(201, 11%, 96%);
+  --clr-neutral-grayish-blue-200: hsl(201, 11%, 86%);
   --clr-neutral-grayish-blue-400: hsl(201, 11%, 66%);
   --clr-neutral-grayish-blue-600: hsl(201, 11%, 46%);
   --clr-neutral-white: hsl(0, 0%, 100%);
+  --clr-neutral-black: hsl(0, 0%, 20%);
+  --clr-highlight: hsl(53, 100%, 54%);
 
   --font-family-primary: "Bai Jamjuree", sans-serif;
   --font-size-body: calc(18rem / 16);
@@ -40,6 +44,18 @@
     line-height: 1.2;
   }
 
+  h1 {
+    margin-block: 0.6em;
+  }
+
+  h2 {
+    margin-block: 0.5em;
+  }
+
+  h3 {
+    margin-block: 0.4em;
+  }
+
   picture,
   img,
   svg {
@@ -58,10 +74,6 @@
     font-size: var(--font-size-body);
   }
 
-  body > * {
-    padding: 1em;
-  }
-
   h1,
   h2,
   h3 {
@@ -71,14 +83,52 @@
   p {
     color: var(--clr-neutral-grayish-blue-600);
   }
+
+  footer {
+    background-color: var(--clr-neutral-grayish-blue-100);
+    width: 100%;
+    text-align: center;
+    padding-block: 4em;
+    padding-inline: 4vw;
+  }
+
+  @media screen and (min-width: calc(768em / 16)) {
+    footer {
+      text-align: start;
+    }
+  }
 }
 
 @layer layout {
+  body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  @media screen and (min-width: calc(768em / 16)) {
+    body {
+      align-items: center;
+    }
+  }
+
+  main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
   .hero-section {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 2.5em;
+  }
+
+  @media screen and (min-width: calc(768em / 16)) {
+    .hero-section {
+      align-self: stretch;
+    }
   }
 
   .download-btns {
@@ -92,15 +142,162 @@
       flex-direction: row;
     }
   }
+
+  .features-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .features-section__subsection {
+    display: flex;
+    flex-direction: column;
+  }
+
+  @media screen and (min-width: calc(768em / 16)) {
+    .features-section__subsection {
+      flex-direction: row;
+      align-items: center;
+
+      gap: clamp(0.5em, 5vw, 4em);
+    }
+  }
+
+  .features-section__features {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+  }
+
+  .cross-platform-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4em;
+  }
+
+  .benefits-section {
+    display: flex;
+    flex-direction: column;
+    gap: 6em;
+    align-items: center;
+  }
+
+  @media screen and (min-width: calc(768em / 16)) {
+    .benefits-section {
+      gap: 3em;
+    }
+  }
+
+  .benefits-section__benefits {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2em;
+    align-items: baseline;
+  }
+
+  @media screen and (min-width: calc(768em / 16)) {
+    .benefits-section__benefits {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  .benefits-section__benefits__benefit {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .company-logos {
+    display: flex;
+    flex-direction: column;
+    gap: 4em;
+    align-items: center;
+  }
+
+  @media screen and (min-width: calc(768em / 16)) {
+    .company-logos {
+      flex-direction: row;
+      gap: 1em;
+      justify-content: space-around;
+    }
+  }
+
+  .cta-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3em;
+  }
+
+  footer {
+    display: flex;
+    justify-content: center;
+  }
+
+  footer > div {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  @media screen and (min-width: calc(768em / 16)) {
+    footer > div {
+      max-width: calc(1020em / 16);
+
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+
+  .footer-content {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    align-items: center;
+    gap: 2.5em;
+  }
+
+  @media screen and (min-width: calc(768em / 16)) {
+    .footer-content {
+      grid-template-columns: auto 1fr auto;
+      justify-items: initial;
+      gap: 0;
+    }
+  }
+
+  .nav-links {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5em;
+  }
+
+  @media screen and (min-width: calc(768em / 16)) {
+    .nav-links {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  .icons-group {
+    display: flex;
+    gap: 2em;
+  }
 }
 
 @layer component {
+  :root {
+    --max-common-width: 55ch;
+    --common-inline-padding: 4vw;
+  }
+
   .hero-section {
     background-image: url("./images/bg-header-mobile.png");
     background-repeat: no-repeat;
     background-size: cover;
 
     text-align: center;
+
+    padding-inline: var(--common-inline-padding);
   }
 
   @media screen and (min-width: calc(768em / 16)) {
@@ -114,10 +311,8 @@
   }
 
   .hero-copy {
-    display: grid;
-    gap: 1em;
     width: 100%;
-    max-width: 55ch;
+    max-width: var(--max-common-width);
   }
 
   .download-btn {
@@ -129,6 +324,7 @@
     padding: 1em 4em;
 
     border-radius: 2em;
+    max-width: fit-content;
   }
 
   @media screen and (min-width: calc(768em / 16)) {
@@ -140,19 +336,134 @@
   .download-btns__iOS-btn {
     background-color: var(--clr-primary-cyan-600);
     border-bottom: calc(4em / 16) solid var(--clr-primary-cyan-700);
+    box-shadow: 0 calc(5em / 16) calc(10em / 16) hsla(171, 66%, 44%, 0.5);
   }
 
   .download-btns__Mac-btn {
     background-color: var(--clr-primary-blue-400);
     border-bottom: calc(4em / 16) solid var(--clr-primary-blue-700);
+    box-shadow: 0 calc(5em / 16) calc(10em / 16) hsla(233, 100%, 59%, 0.5);
+  }
+
+  .features-section {
+    text-align: center;
+
+    max-width: calc(1020em / 16);
+
+    padding-inline: var(--common-inline-padding);
+    margin-block: 12em;
+  }
+
+  @media screen and (min-width: calc(768em / 16)) {
+    .features-section {
+      padding: 0;
+    }
+  }
+
+  .features-section__copy {
+    max-width: var(--max-common-width);
+  }
+
+  .features-section__section-img {
+    margin-block: 4em;
+  }
+
+  @media screen and (min-width: calc(768em / 16)) {
+    .features-section__section-img {
+      margin: 0;
+    }
+  }
+
+  @media screen and (min-width: calc(768em / 16)) {
+    .features-section__subsection {
+      margin-top: 4em;
+    }
+  }
+
+  .features-section__features {
+    text-align: center;
+  }
+
+  @media screen and (min-width: calc(768em / 16)) {
+    .features-section__features {
+      text-align: start;
+    }
+  }
+
+  .cross-platform-section {
+    text-align: center;
+    padding-inline: var(--common-inline-padding);
+  }
+
+  .cross-platform-section__copy {
+    max-width: var(--max-common-width);
+  }
+
+  .benefits-section {
+    text-align: center;
+  }
+
+  .benefits-section__benefits {
+    max-width: calc(1020em / 16);
+
+    padding-inline: var(--common-inline-padding);
+  }
+
+  .benefits-section__benefits__benefit {
+    max-width: 45ch;
+  }
+
+  .company-logos-section {
+    width: 100%;
+    padding-inline: var(--common-inline-padding);
+    padding-block: 8em;
+  }
+
+  .cta-section {
+    text-align: center;
+    padding-inline: var(--common-inline-padding);
+    padding-bottom: 8rem;
+  }
+
+  @media screen and (min-width: calc(768em / 16)) {
+    .cta-section {
+      max-width: var(--max-common-width);
+      padding-inline: 0;
+    }
+  }
+
+  .footer-logo {
+    max-width: 3em;
+  }
+
+  .nav-links {
+    width: fit-content;
+  }
+
+  @media screen and (min-width: calc(768em / 16)) {
+    .nav-links {
+      padding-left: 6rem;
+    }
+  }
+
+  .nav-links > li > a {
+    text-decoration: none;
+    color: var(--clr-neutral-grayish-blue-600);
   }
 
   .attribution {
+    background-color: var(--clr-highlight);
+    width: 100%;
+    padding-block: 1em;
+
+    color: var(--clr-neutral-black);
+
     font-size: 11px;
     text-align: center;
   }
 
   .attribution a {
-    color: hsl(228, 45%, 44%);
+    color: var(--clr-neutral-dark-grayish-blue);
+    font-weight: var(--font-weight-bold);
   }
 }
